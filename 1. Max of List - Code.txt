@@ -1,0 +1,18 @@
+int main()
+{
+	//vector<int> v_int{ 92, 392, 4456, 89742 };
+	vector<int> v_int{ 4456782, 4456872, 4465567, 4444567, 4545673 };
+	int max{ v_int[0] };
+	for (int i = 1; i < v_int.size(); ++i)
+	{
+		if (max < v_int[i])
+		{
+			max = v_int[i];
+		}
+	}
+	cout << "********************************" << endl;
+	cout << "The largest = " << max << endl;
+	cout << "********************************" << endl;
+	return 0;
+
+}

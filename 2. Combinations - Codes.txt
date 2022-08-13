@@ -1,0 +1,41 @@
+int main()
+{
+/*Largest and smallest no. obtained from a cmbination of 4 single digit whle no.s not including 0*/
+cout << "Example 1" << endl;
+	vector<int> v_int{ 9, 7, 4, 1 };
+	sort(v_int.begin(),v_int.end());
+	int largest{0}, smallest{0};
+	for (int i = 0; i < v_int.size(); ++i)
+	{
+		largest = largest + v_int[i] * pow(10, i);
+		smallest = smallest + v_int[v_int.size() - 1 - i] * pow(10, i);
+	}
+	cout << "********************************" << endl;
+	cout << "The largest = " << largest << endl;
+	cout << "The smallest = " << smallest << endl;
+	cout << "********************************" << endl;
+
+/*Largest and smallest no. obtained from a cmbination of 4 single digit whle no.s including 0*/
+cout << "Example 2" << endl;
+	vector<int> v_int{ 4,7,5,0 };
+	int largest{0}, smallest{0};
+	sort(v_int.begin(), v_int.end());
+	for (int i = 0; i < v_int.size(); ++i)
+	{
+		largest = largest + v_int[i] * pow(10, i);
+	}
+	if (v_int[0] == 0)
+	{
+		v_int[0] = v_int[1];
+		v_int[1] = 0;
+	}
+	for (int i = 0; i < v_int.size(); ++i)
+	{
+		smallest = smallest + v_int[v_int.size() - 1 - i] * pow(10, i);
+	}
+	std::cout << "***************************************" << endl;
+	cout << "The largest = " << largest << endl;
+	cout << "The smallest = " << smallest << endl;
+	std::cout << "***************************************" << endl;
+return 0;
+}

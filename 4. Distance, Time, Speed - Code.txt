@@ -1,0 +1,22 @@
+int main()
+{
+	/*Total travel time from Lal Quila to the India Gate and retreat*/
+	double lalQuila{ 0 }, paragatiMaidan{ 3 }, theIndiaGate{ 5 };//distance in kilometers
+	double lQ2pM_speed{ 30 }, pM2IG_speed{ 40 };//speed in km per hr
+	double time_oneside, time_total;
+	/*speed = distance / time => time = distance / speed*/
+	double lQ2pM_distance = paragatiMaidan - lalQuila;
+	double lQ2pM_time = lQ2pM_distance / lQ2pM_speed;
+	double pM2tIG_distance = theIndiaGate - paragatiMaidan;
+	double pM2tIG_time = pM2tIG_distance / pM2IG_speed;
+	time_oneside = lQ2pM_time + pM2tIG_time;
+	time_total = 2 * time_oneside;
+	cout << "**********************************************" << endl;
+	cout << "Total travel time for Lal Quila to the India Gate = "
+		<< time_total << " hrs" << " = " << time_total*60 << " minutes.";
+	cout << "**********************************************" << endl;
+
+
+
+	return 0;
+}

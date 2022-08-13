@@ -1,0 +1,21 @@
+int main()
+{
+	/*Indian system of numeration*/
+	int large_num = 40350894;
+	stringstream ss;
+	ss << large_num;
+	string large_str, numerated_str = "";
+	ss >> large_str;
+	for (int i = 0; i < large_str.length(); ++i)
+	{
+		if (i == 3 || ((i - 3) % 2 == 0 && i > 3)) numerated_str = "," + numerated_str;
+		//if(i%3 == 0 && i > 0) for international system of numeration
+		numerated_str = large_str[large_str.length() - 1 - i] + numerated_str;
+	}
+	cout << "*************************************************" << endl;
+	cout << "The nemerated number in Indian system = " << numerated_str << endl;
+	cout << "*************************************************" << endl;
+
+
+	return 0;
+}
