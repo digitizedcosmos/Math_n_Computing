@@ -1,0 +1,18 @@
+int main()
+{
+	int price_G = 500;
+	int price_M = 200;
+	int price_C = 40;
+	int total_b{ 0 }, total_wb{0};
+	int n_G{ 1 };
+	int n_M{ 3 };
+	int n_C{ 4 };
+	total_b = (n_G * price_G) + (n_M * price_M) + (n_C * price_C);
+	total_wb = n_G * price_G + n_M * price_M + n_C * price_C;
+	cout << "**************************************************\n";
+	cout << "Total (with bracket) = " << total_b << endl;
+	cout << "Total (without bracket) = " << total_wb << endl;
+	cout << "**************************************************\n";
+
+	return 0;
+}
