@@ -1,0 +1,35 @@
+int main()
+{
+	/*Check whether Square or Triangle or Both*/
+	cout << "Number  Square  Triangle\n";
+	for (int number = 2; number < 20; ++number)
+	{
+		auto num = number;
+		//Square
+		cout << num;
+		int num_sqrt = std::sqrt(num);
+		if (num_sqrt * num_sqrt == num)
+		{
+			cout << "        " << "Yes     ";
+		}
+		else
+		{
+			cout << "        " << "No      ";
+		}
+		//Triangle
+		for (int i = 1; num > 0; ++i)
+		{
+			num -= i;
+			if (num == 0)
+			{
+				cout << "  " << "Yes     \n";
+			}
+			else if (num < 0)
+			{
+				cout << "  " << "No     \n";
+			}
+		}
+	}
+	
+	return 0;
+}
